@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max of 3 Numbers</title>
+</head>
+<body>
+<script>
+    let number1 = parseInt(prompt("Nhập vào số đầu tiên: "));
+    let number2 = parseInt(prompt("Nhập vào số thứ hai: "));
+    let number3 = parseInt(prompt("Nhập vào số thứ ba: "));
+    let max = number1;
+
+    if (max < number2)
+        max = number2;
+    if (max < number3)
+        max = number3;
+    alert('Số lớn nhất trong 3 số là: ' + max);
+</script>
+</body>
+</html>

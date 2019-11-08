@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        td{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table style="border: 1px solid black">
+        <tr>
+            <td  colspan="4">
+                <input type="text" placeholder="0" id="screen" style="text-align: right" value="">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" id="num7" onclick="displayButton(this)"></td>
+            <td><input type="button" value="8" id="num8" onclick="displayButton(this)"></td>
+            <td><input type="button" value="9" id="num9" onclick="displayButton(this)"></td>
+            <td><input type="button" value="+" id="add" onclick="displayButton(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" id="num4" onclick="displayButton(this)"></td>
+            <td><input type="button" value="5" id="num5" onclick="displayButton(this)"></td>
+            <td><input type="button" value="6" id="num6" onclick="displayButton(this)"></td>
+            <td><input type="button" value="-" id="sub" onclick="displayButton(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" id="num1" onclick="displayButton(this)"></td>
+            <td><input type="button" value="2" id="num2" onclick="displayButton(this)"></td>
+            <td><input type="button" value="3" id="num3" onclick="displayButton(this)"></td>
+            <td><input type="button" value="*" id="mult" onclick="displayButton(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" id="clear" onclick="clearScreen()"></td>
+            <td><input type="button" value="0" id="0" onclick="displayButton(this)"></td>
+            <td><input type="button" value="=" id="equal" onclick="calculation()"></td>
+            <td><input type="button" value="/" id="div" onclick="displayButton(this)"></td>
+        </tr>
+    </table>
+
+    <script>
+        let screen = document.getElementById('screen');
+
+        function displayButton(x) {
+            screen = document.getElementById('screen');
+            screen.value = screen.value + x.value;
+
+        }
+
+        function calculation() {
+            let result;
+            result = screen.value;
+            screen.value = eval(result);
+        }
+
+        function clearScreen() {
+            screen.value = '';
+            alert(screen(value));
+        }
+    </script>
+</body>
+</html>

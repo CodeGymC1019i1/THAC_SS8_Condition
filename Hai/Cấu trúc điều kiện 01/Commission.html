@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Commission</title>
+</head>
+<body>
+	<h2>Nhập vào giá trị từng hóa đơn bạn đã bán được.</h2>
+	<h3>Mỗi hóa đơn click xác nhận 1 lần.</h3>
+	<h4>Tính lại từ đầu nhấn F5 trên bàn phím.</h4>
+	<input type="number" id="sales"><br>
+	<input type="button" id="" value="Tính hoa hồng nhận được" onclick="calculate()"><br>
+	<p id='result'></p>
+	<script>
+		let commission = 0;
+		function calculate() {
+			let sales = document.getElementById('sales').value;
+			valueBill = parseInt(sales);
+
+			if (valueBill <= 200000)
+				commission = commission + 0.03 * valueBill;
+			else if (valueBill <=500000)
+				commission = commission + 0.05 * valueBill;
+				else
+					commission = commission + 0.1 * valueBill;
+			document.getElementById('sales').value = '';
+			document.getElementById('result').innerHTML = "Số tiền hoa hồng nhận được là: " + commission;
+		}
+	</script>
+</body>
+</html>

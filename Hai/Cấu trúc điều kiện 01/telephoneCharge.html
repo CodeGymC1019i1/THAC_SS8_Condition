@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Telephone Charge</title>
+</head>
+<body>
+	<script>
+		let timeIntranetCall = parseFloat(prompt('Nhập vào số giây gọi nội mạng: '));
+		let timeOffnetCall = parseFloat(prompt('Nhập vào số giây gọi ngoại mạng: '));
+		let fee = 0;
+
+		if (timeIntranetCall <= 6)								//Phí 6s đầu nội mạng là 80d
+			fee = fee + 80;
+		else 
+			fee = fee + (timeIntranetCall - 6) * 13.33;         //phí mỗi giây tiếp theo là 13.33d
+		if (timeOffnetCall <= 6)								//phí 6s đầu nội mạng là 89.09d
+			fee = fee + 89.09;									
+		else
+			fee = fee + (timeOffnetCall - 6) * 14.85;			//phí mỗi giây tiếp theo là 14.85
+
+		alert('Số tiền cước là: ' + fee);
+
+
+	</script>
+</body>
+</html>

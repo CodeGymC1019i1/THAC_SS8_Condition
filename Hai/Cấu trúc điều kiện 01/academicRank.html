@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Academic Rank</title>
+</head>
+<body>
+	<p>Nhập điểm thi bài kiểm tra</p>
+	<input type="number" id="testMark">
+	<p>Nhập điểm thi bài kiểm tra giữa kì</p>
+	<input type="number" id="midTestMark">
+	<p>Nhập điểm thi bài kiểm tra cuối kì</p>
+	<input type="number" id="finalTestMark">
+	<input type="button" id='classify' onclick="academicRank()" value="Phân loại">
+<script>
+function academicRank() {
+	let testMark = document.getElementById('testMark').value;
+	let midTestMark = document.getElementById('midTestMark').value;
+	let finalTestMark = document.getElementById('finalTestMark').value;
+	let tMark = parseInt(testMark);
+	let mTMark = parseInt(midTestMark);
+	let fTMark = parseInt(finalTestMark);
+	let averageMark = (tMark + mTMark*2 + fTMark*3) / 6;
+
+	if (averageMark < 5)
+		alert('Học sinh xếp hạng YẾU');
+	else if (averageMark < 6.5)
+		alert('Học sinh xếp hạng TRUNG BÌNH');
+		else if (averageMark < 8)
+			alert('Học sinh xếp hạng KHÁ');
+			else
+				alert('Học sinh xếp hạng GIỎI');
+	document.getElementById('testMark').value = '';
+	document.getElementById('midTestMark').value = '';
+	document.getElementById('finalTestMark').value = '';
+
+}
+
+</script>
+</body>
+</html>

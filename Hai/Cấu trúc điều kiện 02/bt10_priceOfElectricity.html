@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		//tính giá điện cho hộ gia đình sinh hoạt
+		let kwh = parseFloat(prompt('Nhập vào số lượng điện tiêu thụ(kWh): ')); 
+		let price = 0;
+
+		if (kwh <= 50)
+			price = price + kwh * 1.678;
+		else if (kwh <=100)
+			price = price + kwh * 1.734;
+			else 
+				price = price + kwh * 1.734;
+				// else if (kwh <=300
+				// 	price = price + price * 1.734;
+				// 	else if (kwh <=400)
+				// 		price = price + price * 1.734;
+				// 		else
+				// 			price = price + price * 1.734;
+			
+				alert('Tiền điện của bạn là: ' + price);
+	</script>
+</body>
+</html>
