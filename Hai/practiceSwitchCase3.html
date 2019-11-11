@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check value</title>
+</head>
+<body>
+	<script>
+		let number = parseInt(prompt("Nhập số: "));
+		let check = number < 0 ? -1 : 1;
+
+		switch (number) {
+			case 0: 
+				alert('0');
+				break;
+			default:
+				switch (check) {
+					case -1:
+						alert('-1');
+						break;
+					case 1:
+						alert('1');
+						break;
+				}
+		}
+	</script>
+</body>
+</html>

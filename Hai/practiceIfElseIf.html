@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Log in</title>
+</head>
+<body>
+
+	<script>
+		let nameUser = prompt('Mời bạn nhập tên: ');
+
+		if (nameUser == 'Admin') {
+			let password = prompt('Mời bạn nhập mật khẩu');
+			if (password == 'TheMaster')
+				alert('Welcome');
+			else if (password == '')
+				alert('null');
+				else
+					alert('Wrong password');
+		}
+		else if (nameUser =='')
+				alert('Cancel.');
+			else 
+				alert('I dont know you');	
+	</script>
+</body>
+</html>

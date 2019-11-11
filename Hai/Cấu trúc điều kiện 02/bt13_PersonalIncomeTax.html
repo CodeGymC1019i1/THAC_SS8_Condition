@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal income tax</title>
+</head>
+<body>
+<script>
+    let i;
+    let tax;
+    let income = parseInt(prompt('Hãy nhập vào  số tiền bạn kiếm được mỗi tháng(đơn vị nghìn đồng): '));
+
+    for (i = 1; i < 2; i++) {
+        if (income <= 5000) {
+            tax = 0.05 * income;
+            break;
+        }
+
+        if (income <= 10000) {
+            tax = 0.1 * income - 250;
+            break;
+        }
+
+        if (income <= 18000) {
+            tax = 0.15 * income - 750;
+            break;
+        }
+
+        if (income <= 32000) {
+            tax = 0.2 * income - 1650;
+            break;
+        }
+
+        if (income <= 52000) {
+            tax = 0.25 * income - 3250;
+            break;
+        }
+
+        if (income <= 80000) {
+            tax = 0.3 * income - 5850;
+            break;
+        } else {
+            tax = 0.35 * income - 9850;
+            break;
+        }
+    }
+    alert('Số tiền bạn cần nộp thuế TNCN là: ' + tax + '.000');
+</script>
+}
+
+
+}
+</body>
+</html>
