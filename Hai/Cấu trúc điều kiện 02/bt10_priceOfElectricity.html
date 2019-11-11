@@ -9,21 +9,43 @@
 		//tính giá điện cho hộ gia đình sinh hoạt
 		let kwh = parseFloat(prompt('Nhập vào số lượng điện tiêu thụ(kWh): ')); 
 		let price = 0;
+		const price1= 50 * 1.678;
+		const price2= 50 * 1.734;
+		const price3= 100 * 2.014;
+		const price4= 100 * 2.536;
+		const price5= 100 * 2.834;
+		const price6= 100 * 2.927;
 
-		if (kwh <= 50)
-			price = price + kwh * 1.678;
-		else if (kwh <=100)
-			price = price + kwh * 1.734;
-			else 
-				price = price + kwh * 1.734;
-				// else if (kwh <=300
-				// 	price = price + price * 1.734;
-				// 	else if (kwh <=400)
-				// 		price = price + price * 1.734;
-				// 		else
-				// 			price = price + price * 1.734;
-			
-				alert('Tiền điện của bạn là: ' + price);
+		// if (kwh <= 50)
+		// 	price = kwh * 1.678;
+		// if (50 < kwh <= 100)
+		// 	price = (kwh - 50) * 1.734 + 50 * 1.678;
+		// if (100 < kwh <= 200)
+		// 	price = (kwh - 100) * 2.014 + 50 * 1.678 + 50 * 1.734;
+		// if (200 < kwh <= 300)
+		// 	price = (kwh - 200) * 2.536 + 50 * 1.678 + 50 * 1.734 + 100 * 2.014;
+		// if (kwh > 300)
+		// 	price = (kwh - 300) * 2.834 + 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + 100 * 2.536;
+		// alert('Tiền điện bạn phải trả là: ' + price);
+
+		 if (kwh <= 50)
+		 	price = kwh * 1.678;
+		else if (kwh <= 100)
+			price = (kwh - 50) * 1.734 + price1;
+			else {
+			let end = 100;
+			let i = 1;
+
+			while (kwh > end && end <= 400) {
+				for (i = 1; i <= (end / 100) + 1; i++) {
+					price += eval('price' + i);
+				}
+				end += 100;
+			}
+			price += (kwh - end + 100) * eval('price' + i) / 100;
+		}
+		alert('Số tiền bạn phải trả: ' + price);
 	</script>
+
 </body>
 </html>

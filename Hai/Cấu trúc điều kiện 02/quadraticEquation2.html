@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quadratic equation 2</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('Với phương trình ax^2 + bx + c = 0, hãy nhập a: '));
+    let b = parseFloat(prompt('Tiếp tục nhập số b: '));
+    let c = parseFloat(prompt('Tiếp tục nhập số c: '));
+    if (a != 0) {
+        let delta = b * b - 4 * a * c;
+        if (delta < 0)
+            alert('Phương trình vô nghiệm');
+        else if (delta == 0)
+            alert('Phương trình có nghiệm x = ' + (-b) / (2 * a));
+            else {
+                alert('Phương trình có nghiệm x1 = ' + (-b + Math.sqrt(delta)) / (2 * a));
+                alert('Phương trình có nghiệm x2 = ' + (-b - Math.sqrt(delta)) / (2 * a));
+        }
+    }
+    else
+        solveFirstOrderEquation(b,c);
+    function solveFirstOrderEquation(x,y) {
+        if (x == 0 && y != 0)
+            alert('Phương trình vô nghiệm');
+        else if (x == 0 && y == 0)
+            alert('Phương trình vô số nghiệm');
+        else {
+            alert('Phương trình có nghiệm x = ' + (-y) / x );
+        }
+    }
+</script>
+</body>
+</html>
