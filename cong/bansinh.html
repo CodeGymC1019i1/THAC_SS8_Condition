@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0px;
+            padding: 0px}
+        table {text-align: center; margin: auto; width: 800px;margin-top: 100px;}
+    </style>
+</head>
+<body>
+
+
+
+<script>
+    let tab
+    tab = '<table border="1" cellspacing="0" cellpadding="3">';
+    for (let i=1;i<10;i++){
+        tab +='<tr>';
+        for (let j=2;j<10;j++){
+            tab+= '<td>'+ j +'x' + i +'='  +j * i + '</td>'}
+        tab +='</tr>';
+    }
+    tab +="</table>"
+    document.write(tab)
+</script>
+
+</body>
+
+
+</html>
